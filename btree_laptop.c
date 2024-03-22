@@ -112,7 +112,6 @@ void DeleteAll(btree** node)
     if (*node == NULL) return;
     DeleteAll(&((*node)->left));
     DeleteAll(&((*node)->right));
-    print_laptop(*((*node)->value));
     free(*node);
     (*node) = NULL;
 }

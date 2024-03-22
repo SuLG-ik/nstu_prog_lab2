@@ -15,6 +15,8 @@ void Ins_Btree(int val, btree** q)
         (*q)->value = val;
         return;
     }
+    if (val == (*q)->value)
+        return;
     if (val < (*q)->value)
         Ins_Btree(val, &(*q)->left);
     else
